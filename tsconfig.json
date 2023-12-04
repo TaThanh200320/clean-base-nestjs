@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "declaration": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "ES2021",
+        "sourceMap": true,
+        "outDir": "./dist",
+        "baseUrl": "./",
+        "incremental": true,
+        "skipLibCheck": true,
+        "strictNullChecks": false,
+        "noImplicitAny": false,
+        "strictBindCallApply": false,
+        "forceConsistentCasingInFileNames": false,
+        "noFallthroughCasesInSwitch": false,
+        "paths": {
+            "@authentication/*": ["src/authentication/*"],
+            "@common/*": ["src/common/*"],
+            "@constant/*": ["src/common/constants"],
+            "@decorators/*": ["src/common/decorators/*"],
+            "@filters/*": ["src/common/filters/*"],
+            "@helpers/*": ["src/common/helpers/*"],
+            "@interceptors/*": ["src/common/interceptors/*"],
+            "@middlewares/*": ["src/common/middlewares/*"],
+            "@pipes/*": ["src/common/pipes/*"],
+            "@configs/*": ["src/config/*"],
+            "@dtos/*": ["src/dtos/*"],
+            "@models/*": ["src/models/*"],
+            "@services/*": ["src/services/*"]
+        }
+    }
+}

@@ -1,0 +1,27 @@
+version: '3.11'
+services:
+    mongodb:
+        image: mongo:latest
+        container_name: ancorner_db
+        hostname: ancorner_db
+        restart: unless-stopped
+        command: mongod --auth
+        env_file:
+            - .env
+        ports:
+            - $MONGODB_PORT:27017
+        volumes:
+            - ancorner_data:/data/db
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=$MONGODB_USERNAME
+            - MONGO_INITDB_ROOT_PASSWORD=$MONGODB_PASSWORD
+            - MONGO_INITDB_DATABASE=$MONGODB_DATABASE
+            - MONGODB_DATA_DIR=ancorner_data
+        networks:
+            - ancorner_api
+
+volumes:
+    ancorner_data:
+
+networks:
+    ancorner_api:
